@@ -32,7 +32,7 @@ namespace harpocrates {
 		return __compile_error();
 	}
 	int opencl::set_buildoption(std::string build_option) {
-		__build_option = build_option;
+		__build_option += std::string{ " " } + build_option;
 		return 0;
 	}
 	int opencl::wait_queue(std::vector<int> work_size, int work_demension) {
